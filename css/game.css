@@ -1,0 +1,179 @@
+@font-face {
+    font-family: DealerStrikesStraight;
+    src: local(DealerStrikesStraight), url(fonts/DealerStrikesStraight.otf) format("otf");
+}
+
+@font-face {
+    font-family: HalfbreD;
+    src: local(HalfBreD), url(fonts/HalfBreD.otf) format("otf");
+}
+
+* {
+    font-family: DealerStrikesStraight;
+    margin: 0;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0vh;
+    padding: 0vh;
+    overflow-x: hidden; 
+}
+
+body {
+    background-color: #b4ab44;
+}
+
+h1, button  {
+    font-family: HalfbreD;
+    text-align: center;
+}
+
+footer {
+    background-color: #283747;
+    color: #F3F3F3;
+
+    text-align: center;
+    position: bottom;
+
+    width: 100%;   
+    padding: 0.3vh;  
+}
+
+li
+{
+    display: inline-block;
+}
+
+/* Navigation Items */
+#linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    background-color:#3C1874;
+
+    font-size: 5vh;
+
+    width:100%;
+}
+.navText {
+    color: #F3F3F3;
+
+    text-decoration:none;
+
+    line-height:10vh;
+    padding: 2vh
+}
+.navText:hover, #save:hover, #load:hover, #reset:hover {
+    color: #f3eea7;
+}
+
+#save, #load, #reset {
+    background-color: #3C1874;
+    color: #ffffff;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    font-size: 5vh;
+
+    padding: 2vh;
+}
+
+.flex {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    flex-direction: row;
+}
+.column {
+    flex-direction: column;
+}
+.center {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.screenSizeImg {
+    width: 20%;
+}
+.screenSize {
+    width: 24%;
+}
+
+.img {
+    width: 60%;
+}
+.button {
+    background-color: #b236c2;
+    color: #000000;
+
+    outline: none;
+
+    width: 50%;
+    padding: 0.9vh;
+    border-radius: .3vh;
+}
+.button:disabled {
+    background-color: gray !important;
+}
+.upgradeButton {
+    width: 30%;
+    margin-left: 2vh;
+}
+.counter {
+    background-color: #3C1874;
+    color: #ffffff;
+
+    text-align: center;
+
+    width: 30%;
+}
+
+.inline {
+    display: inline;
+}
+
+#levelButton {
+    width: 15%;
+}
+
+#levelContainer {
+    text-align: left;
+
+    margin-right: 3vh;
+}
+
+#upgrades {
+    margin-bottom: 10vh;
+}
+
+#left {
+    padding: 10vh;
+    margin-right: 10vh;
+}
+
+#right {
+    padding: 10vh;
+}
+
+#email {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 780px) {
+    .screenSizeImg {
+        width: 100%;
+    }
+    .screenSize {
+        width: 100%;
+    }
+}

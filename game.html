@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Burger Dynasty</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/game.css">
+    </head>
+    <nav>
+        <ul id="linkContainer">
+            <li>
+                <a class="navText "href="./index.html">Main Menu</a>
+            </li>
+            <li>
+                <button id="save">Save</button>
+            </li>
+            <li>
+                <button id="load">Load</button>
+            </li>
+            <li>
+                <button id="reset">Reset</button>
+            </li>
+        </ul>
+    </nav>
+    <body>
+        <div id="gameplay">
+            <div class="flex column">
+                <div class="flex row">
+                    <h1 id="levelContainer">Current Level:</h1><h1 id="level">1</h1>
+                </div>
+            </div>
+            <div class="flex row">
+                    <div class="flex center screenSizeImg">
+                        <img class="img" src="./img/Burger.png">
+                    </div>
+                    <div class="flex center screenSize">
+                        <button class="button" id="btn1">Create</button>
+                    </div>
+                    <div class="flex center screenSize">
+                        <h1 class="name">Burgers</h1>
+                    </div>
+                    <div class="flex center screenSize">
+                        <input class="counter" id="ct1" type="text" value="0" readonly="readonly"/>
+                    </div>
+            </div>
+            <div class="flex row">
+                <div class="flex center screenSizeImg">
+                    <img class="img" src="./img/Restaurant.png">
+                </div>
+                <div class="flex center screenSize">
+                    <button disabled class="button" id="btn2">Create</button>
+                </div>
+                <div class="flex center screenSize">
+                    <h1 class="name">Restaurants</h1>
+                </div>
+                <div class="flex center screenSize">
+                    <input class="counter" id="ct2" type="text" value="0" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="flex row">
+                <div class="flex center screenSizeImg">
+                    <img class="img" src="./img/GroceryStore.png">
+                </div>
+                <div class="flex center screenSize">
+                    <button disabled class="button" id="btn3">Create</button>
+                </div>
+                <div class="flex center screenSize">
+                    <h1 class="name">Grocery Stores</h1>
+                </div>
+                <div class="flex center screenSize">
+                    <input class="counter" id="ct3" type="text" value="0" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="flex row">
+                <div class="flex center screenSizeImg">
+                    <img class="img" src="./img/Factory.png">
+                </div>
+                <div class="flex center screenSize">
+                    <button disabled class="button" id="btn4">Create</button>
+                </div>
+                <div class="flex center screenSize">
+                    <h1 class="name">Factories</h1>
+                </div>
+                <div class="flex center screenSize">
+                    <input class="counter" id="ct4" type="text" value="0" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="flex row">
+                <div class="flex center screenSizeImg">
+                    <img class="img" src="./img/SlaughterHouse.png">
+                </div>
+                <div class="flex center screenSize">
+                    <button disabled class="button" id="btn5">Create</button>
+                </div>
+                <div class="flex center screenSize">
+                    <h1 class="name">Slaughter Houses</h1>
+                </div>
+                <div class="flex center screenSize">
+                    <input class="counter" id="ct5" type="text" value="0" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="flex row">
+                <div class="flex center screenSizeImg">
+                    <img class="img" src="./img/CowFarm.png">
+                </div>
+                <div class="flex center screenSize">
+                    <button disabled class="button" id="btn6">Create</button>
+                </div>
+                <div class="flex center screenSize">
+                    <h1 class="name">Ranches</h1>
+                </div>
+                <div class="flex center screenSize">
+                    <input class="counter" id="ct6" type="text" value="0" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="flex row">
+                <div class="flex center screenSizeImg">
+                    <img class="img" src="./img/BreedingFacility.png">
+                </div>
+                <div class="flex center screenSize">
+                    <button disabled class="button" id="btn7">Create</button>
+                </div>
+                <div class="flex center screenSize">
+                    <h1 class="name">Breeding Facilities</h1>
+                </div>
+                <div class="flex center screenSize">
+                    <input class="counter" id="ct7" type="text" value="0" readonly="readonly"/>
+                </div>
+            </div>
+            <h1>Level Upgrade</h1>
+            <br>
+            <h1><button id="levelButton" class="button inline">Increase Level</button>  Cost: <div id="levelCost" class="inline">50</div></h1>
+            <br>
+            <br>
+            <div class="flex row" id="upgrades">
+                <div class="flex column" id="left">
+                    <h1>Click Upgrades</h1>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="burgerClickAmount" class="inline">1</div><button id="burgerClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="burgerClickCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="cookClickAmount" class="inline">1</div><button id="cookClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="cookClickCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="managerClickAmount" class="inline">1</div><button id="managerClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="managerClickCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="packerClickAmount" class="inline">1</div><button id="packerClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="packerClickCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="butcherClickAmount" class="inline">1</div><button id="butcherClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="butcherClickCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="rancherClickAmount" class="inline">1</div><button id="rancherClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="rancherClickCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>Per Press: <div id="scientistClickAmount" class="inline">1</div><button id="scientistClickAuto" class="button upgradeButton">Boost</button>  Cost: <div id="scientistClickCost" class="inline">1</div></h2>
+                </div>
+                <div class="flex column" id="right">
+                    <h1>AutoClickers</h1>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="burgerAmount" class="inline">1</div><button id="burgerAuto" class="button upgradeButton">Waiters</button>  Cost: <div id="burgerCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="cookAmount" class="inline">1</div><button id="cookAuto" class="button upgradeButton">Cooks</button>  Cost: <div id="cookCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="managerAmount" class="inline">1</div><button id="managerAuto" class="button upgradeButton">Managers</button>  Cost: <div id="managerCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="packerAmount" class="inline">1</div><button id="packerAuto" class="button upgradeButton">Packagers</button>  Cost: <div id="packerCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="butcherAmount" class="inline">1</div><button id="butcherAuto" class="button upgradeButton">Butchers</button>  Cost: <div id="butcherCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="rancherAmount" class="inline">1</div><button id="rancherAuto" class="button upgradeButton">Ranchers</button>  Cost: <div id="rancherCost" class="inline">1</div></h2>
+                    <br>
+                    <br>
+                    <h2>You Own: <div id="scientistAmount" class="inline">1</div><button id="scientistAuto" class="button upgradeButton">Scientists</button>  Cost: <div id="scientistCost" class="inline">1</div></h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex column" id="achievements">
+            <div class="flex row">
+                <h1 id="achievement1">First Click: You created 1 Burger</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement2">First Levelup: You are at Level 2</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement3">First AutoClicker: You own one Autoclicker in any category</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement4">First Increase: You can add 2 per click in any category</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement5">Enterprise: Own 100 in any category</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement6">Automated: You own ten Autoclickers in each category</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement7">Speedy: You can add 10 per click in each category</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement8">Max: You reached max level 7</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement9">PLATINUM: Own 1000 in each category</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement10">STAR: Own 10,000 Burgers</h1>
+            </div>
+            <div class="flex row">
+                <h1 id="achievement11">THE BURGER: Complete All Achievements</h1>
+            </div>
+        </div>
+        <footer>
+            Cody Luketic
+            <br>
+            <a id="email" href="mailto:luketica@miamioh.edu">Contact Me!</a>
+        </footer>
+        <script type="module" src="./js/game.js" async defer></script>
+    </body>
+</html>
